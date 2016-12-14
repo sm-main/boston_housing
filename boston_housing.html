@@ -11779,14 +11779,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">visuals</span> <span class="kn">as</span> <span class="nn">vs</span> <span class="c1"># Supplementary code</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">ShuffleSplit</span>
+<span class="c1"># from sklearn.c import ShuffleSplit</span>
 
 <span class="c1"># Pretty display for notebooks</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -11811,14 +11811,6 @@ div#notebook {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Boston housing dataset has 489 data points with 4 variables each.
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/sumant/Desktop/udacity/venv/lib/python2.7/site-packages/sklearn/learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
-  DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -11857,23 +11849,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="k">print</span> <span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -11900,7 +11892,7 @@ Minimum price: $105,000.00
 Maximum price: $1,024,800.00
 Mean price: $454,342.94
 Median price $438,900.00
-Standard deviation of prices: $165,340.28
+Standard deviation of prices: $165,171.13
 </pre>
 </div>
 </div>
@@ -11968,7 +11960,7 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -12033,7 +12025,7 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
@@ -12092,7 +12084,7 @@ Yes this model has successfully captured the variation of the target variable as
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
@@ -13843,6 +13835,7 @@ mZmZmZmZmZlZ1/jmlJmZmZmZmZmZdY1vTpmZmZmZmZmZWdf8Hy++akfYvcKwAAAAAElFTkSuQmCC
 <p><strong>Answer: </strong> &lt;br&gt;
 I choose second graph which has maximum depth of <strong>3</strong>. &lt;br&gt;
 As more training points are added score of training curve and testing curve remain <strong>same</strong>. &lt;br&gt;
+The training score is high at the beginning of curve and decreases, The testing score is low in beginning of curve but increases as number of training points increases, but after some time(towards the end) number of training points doesnot make any difference in the score. &lt;br&gt;
 <strong>No</strong> having more training points won't help the model as it looks like training set is biased.</p>
 
 </div>
@@ -14654,7 +14647,9 @@ where regressor is the object of the model that we want to use, params is the pa
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
 In K-fold cross-validation technique we generalize performance by splitting data in <strong>K</strong> parts and then by training k models through it. Here we make sure that each fold acts as testing set one time and training set k-1 times, Average testing performance is used as estimate of sample performance.
-The benefit of using cross-validation for grid search is that we get more reliable estimate of out-of-sample performance than train/test split.</p>
+The benefit of using cross-validation for grid search is that we get more reliable estimate of out-of-sample performance than train/test split by following ways:&lt;br&gt;
+1) While doing train/test split if all the examples that are hard to classify end up in training set, in this case test set will contain easy examples and our test accuracy will be unrealistically high. With k-fold there is no such problem as we go through each fold saperatly.&lt;br&gt;
+2) In k-fold we use our data more effictively as in test/train split we generally use 75% as training data and 25% as testing data, but here we can use 90% data to train model with k=10, so here we are using more data to train a model which usually results in more accurate models. Which helps GridSearchCV to adjust model parameters with least randomness.</p>
 
 </div>
 </div>
@@ -14689,7 +14684,7 @@ The benefit of using cross-validation for grid search is that we get more reliab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
@@ -14714,7 +14709,7 @@ The benefit of using cross-validation for grid search is that we get more reliab
 
     <span class="c1"># TODO: Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
     <span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">params</span><span class="p">[</span><span class="s1">&#39;max_depth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">params</span><span class="p">[</span><span class="s1">&#39;max_depth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
     <span class="c1"># TODO: Transform &#39;perforance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
     <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">score_func</span><span class="o">=</span><span class="n">performance_metric</span><span class="p">)</span>
 
@@ -14755,7 +14750,7 @@ The benefit of using cross-validation for grid search is that we get more reliab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Fit the training data to the model using grid search</span>
@@ -14790,7 +14785,7 @@ The benefit of using cross-validation for grid search is that we get more reliab
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-max_depth is <strong>4</strong> for optimal model.</p>
+max_depth is <strong>4</strong> for optimal model. In question 6 my prediction was <strong>3</strong> which i picked looking at training and testing curve, however with max_depth <strong>4</strong> we will have max training and testing score as the two lines will come more closer and our test set will behave like training set.</p>
 
 </div>
 </div>
@@ -14839,7 +14834,7 @@ max_depth is <strong>4</strong> for optimal model.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a matrix for client data</span>
@@ -14862,9 +14857,9 @@ max_depth is <strong>4</strong> for optimal model.</p>
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Predicted selling price for Client 1&#39;s home: $408,800.00
-Predicted selling price for Client 2&#39;s home: $231,253.45
-Predicted selling price for Client 3&#39;s home: $938,053.85
+<pre>Predicted selling price for Client 1&#39;s home: $403,025.00
+Predicted selling price for Client 2&#39;s home: $237,478.72
+Predicted selling price for Client 3&#39;s home: $931,636.36
 </pre>
 </div>
 </div>
@@ -14879,7 +14874,11 @@ Predicted selling price for Client 3&#39;s home: $938,053.85
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-I think these prices are reasonable, as all are in price range, their mean is close to total mean, their relationship is satisfied by correlation coefficient matrix.</p>
+I think these prices are reasonable, as all are in price range, their mean is close to total mean, their relationship is satisfied by correlation coefficient matrix.&lt;br&gt;
+Minimum Price: $105,000.00.</p>
+<p>Maximum Price: $1,024,800.00</p>
+<p>Mean price: $454,342.94</p>
+<p>Median price $438,900.00</p>
 
 </div>
 </div>
@@ -14958,7 +14957,11 @@ Range in prices: $29,438.89
 1) The data colected in 1978 is not relevent today as all the features like 'RM', 'LSTAT', 'PTRATIO' must have changed by now so 1978 data is of less relevence.&lt;br&gt;
 2) No, the features provided are not sufficient as there are more factors that affect pricing of a house like 'size of roads', 'pollution levels'.&lt;br&gt;
 3) No, this model is not robust enough to make predictions.&lt;br&gt;
-4) No, as there will be different factors that will affect housing prices in rural places.</p>
+4) No, as there will be different factors that will affect housing prices in rural places. &lt;br&gt;</p>
+<p>So the above model should <strong>not</strong> be used for real-world setting, We might have used it if had:&lt;br&gt;
+1) Latest housing prices&lt;br&gt;
+2) Many more features that can be used to predict houses in real senerio.&lt;br&gt;
+3) Data should have features specific to particular location like city or rural area.</p>
 
 </div>
 </div>
