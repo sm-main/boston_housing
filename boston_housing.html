@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11849,7 +11849,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
@@ -11960,7 +11960,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -12025,7 +12025,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
@@ -14621,7 +14621,7 @@ Maximum depth of <strong>3</strong> results in a model which will generalize dat
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>&lt;br&gt;
-GridSearch is a way of systematically working through multiple combinations of parameter tunes, cross-validating as it helps us to determine which tune gives the best performance. So with help of grid search we try to find all possible combinations of parameters of interest.&lt;br&gt;
+GridSearch is a way of systematically working through multiple combinations of parameter tunes, cross-validating as it helps us to determine which tune gives the best performance. Different algorithms have different parameter tunes, changing them results in different score, So with help of grid search we try to find all possible combinations of parameters to see which parameter works best on given data.&lt;br&gt;
 It can be applied by:&lt;br&gt;
 GridSearchCV(regressor, params, cv=cv_sets, scoring=scoring_fnc)
 where regressor is the object of the model that we want to use, params is the parameters of the regressor that we want to try with, cv is number of crossvalidated sets that we want to split into, and scoring function is function by which we want to score.</p>
@@ -14684,7 +14684,7 @@ The benefit of using cross-validation for grid search is that we get more reliab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
@@ -14750,7 +14750,7 @@ The benefit of using cross-validation for grid search is that we get more reliab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Fit the training data to the model using grid search</span>
@@ -14834,7 +14834,7 @@ max_depth is <strong>4</strong> for optimal model. In question 6 my prediction w
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a matrix for client data</span>
@@ -14842,6 +14842,7 @@ max_depth is <strong>4</strong> for optimal model. In question 6 my prediction w
                <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span> <span class="c1"># Client 2</span>
                <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]]</span>  <span class="c1"># Client 3</span>
 
+<span class="k">print</span> <span class="n">features</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 <span class="c1"># Show predictions</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">client_data</span><span class="p">)):</span>
     <span class="k">print</span> <span class="s2">&quot;Predicted selling price for Client {}&#39;s home: ${:,.2f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span>
@@ -14857,7 +14858,16 @@ max_depth is <strong>4</strong> for optimal model. In question 6 my prediction w
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Predicted selling price for Client 1&#39;s home: $403,025.00
+<pre>                RM       LSTAT     PTRATIO
+count  489.000000  489.000000  489.000000
+mean     6.240288   12.939632   18.516564
+std      0.643650    7.081990    2.111268
+min      3.561000    1.980000   12.600000
+25%      5.880000    7.370000   17.400000
+50%      6.185000   11.690000   19.100000
+75%      6.575000   17.120000   20.200000
+max      8.398000   37.970000   22.000000
+Predicted selling price for Client 1&#39;s home: $403,025.00
 Predicted selling price for Client 2&#39;s home: $237,478.72
 Predicted selling price for Client 3&#39;s home: $931,636.36
 </pre>
@@ -14874,11 +14884,8 @@ Predicted selling price for Client 3&#39;s home: $931,636.36
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-I think these prices are reasonable, as all are in price range, their mean is close to total mean, their relationship is satisfied by correlation coefficient matrix.&lt;br&gt;
-Minimum Price: $105,000.00.</p>
-<p>Maximum Price: $1,024,800.00</p>
-<p>Mean price: $454,342.94</p>
-<p>Median price $438,900.00</p>
+I think these prices are reasonable, as all are in price range&lt;br&gt;
+For client-3 the house is more expensive because it has the greater amount of rooms and the neighborhood poverty level is very low when the Student-teacher ratio of nearby schools is correct. It seems also normal that the house of client-1 is more expensive than the client-2. Even if it has a fewer student-teacher ratio, its ratio is correct and at the same time, the number of rooms is higher and the neighborhood poverty level is lower.</p>
 
 </div>
 </div>
